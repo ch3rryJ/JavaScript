@@ -1,0 +1,14 @@
+/* CONTGEM REGRESSIVA -> STYLE.CSS */
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+#contador {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top:20px;
+}
