@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Lojinha Virtual</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <button id="botaoCarrinho">Ver Carrinho</button>
+      <button id="botaoLoja" style="display: none;">Voltar à Loja</button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Minha Loja</h1>
+    
+ 
+    <input type="text" id="barraPesquisa" placeholder="Pesquisar produto...">
+
+    <div id="produtos"></div>
+
+    <div id="carrinho" style="display: none;">
+      <h2>Carrinho</h2>
+      <div class="cabecalho-carrinho">
+        <span>Produto</span>
+        <span>Quantidade</span>
+        <span>Valor</span>
+        <span>Ações</span>
+      </div>
+      <ul id="listaCarrinho"></ul>
+      <div id="totalCarrinho"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

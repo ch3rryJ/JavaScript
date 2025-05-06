@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    outline: none;
+  }
+
+  .container {
+    background-color: rgb(245, 205, 212, 0.7); 
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 30px auto;
+    box-shadow: 0 0 10px rgba(255, 88, 130, 0.5);
+  }
+  
+  .container2 {
+    background-color: rgb(245, 205, 212, 0.7); 
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 5px auto;
+    box-shadow: 0 0 10px rgba(255, 88, 130, 0.5);
+  }
+
+  body {
+    background-image: url('img/fundo.jpg');
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .logo {
+    display: block;
+    margin: 0 auto 10px;
+    max-width: 200px;
+    height: auto;
+  }
+
+  #titulo {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    height: 20px;
+    color: rgb(253, 129, 156);
+  }
+
+  #sub {
+    text-align: center;
+    height: 20px;
+    color: rgb(175, 96, 6);
+  }
+  
+  header {
+    text-align: center;
+    padding: 15px 100px 8px;
+    display: flex;
+    align-items: center;
+  }
+  
+  main {
+    max-width: 550px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .bxs-chevron-up-circle{
+    color: green;
+  }
+  .bxs-chevron-down-circle {
+    color: red;
+  }
+  
+  .resumo {
+    color: rgb(175, 96, 6);
+    display: flex;
+    padding: 10px 0;
+    gap: 40px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .resumo > div {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(255, 88, 130, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    width: 150px;
+  }
+  
+  .novo-item {
+    color: rgb(253, 129, 156);
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .divDesc, .divTipo, .divValor {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .novoItem > button {
+    background-color: #788699;
+    color: white;
+    border: none;
+    padding: 0 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 34px;
+  }
+  
+  input, select {
+    padding: 5px;
+  }
+  
+  .tabela-itens {
+    color: rgb(175, 96, 6);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  table {
+    width: 98%;
+    padding: 20px 0;
+    border-radius: 5px;
+  }
+  
+  th {
+    text-align: start;
+    border-bottom: inset;
+    padding-bottom: 5px;
+  }
+  
+  i {
+    font-size: 25px;
+  }
+  
+  .columnAcao {
+    width: 40px;
+    text-align: center;
+  }
+  
+  .columnAcao > button {
+    background: transparent;
+    border: none;
+  }
+  
+  .columnValor {
+    width: 30%;
+  }
+  
+  .columnTipo {
+    width: 80px;
+    text-align: center;
+  }
+
+  label {
+    font-weight: bold;
+  }
+  

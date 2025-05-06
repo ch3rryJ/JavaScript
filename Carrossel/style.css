@@ -1,0 +1,44 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.carrossel {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.container {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+.container img {
+    width: 33.33%;
+    height: 100%;
+    object-fit: cover;
+}
+button {
+    position: absolute;
+    top: 50%;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+}
+.botao-anterior {
+    left: 10px;
+}
+.botao-proximo {
+    right: 10px;
+}
