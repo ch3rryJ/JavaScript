@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: linear-gradient(rgb(255, 187, 210), rgb(252, 234, 196));
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .btn {
+            background-color: rgb(163, 88, 88);
+            font: 500 20px "Arial";
+            padding: 15px 30px;
+            border-radius: 15px;
+            border: none;
+            color: rgb(255, 187, 210);
+            transition: ease-in-out 0.4s;
+            width: 200px;
+        }
+        .tituloPrincipal {
+            font:  700 40px "Arial";
+            color: rgb(163, 88, 88);
+        }
+        .titulo {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .botoes {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="titulo">
+        <h1 class="tituloPrincipal">Me da um sylva?</h1>
+    </div>
+    <div class="botoes">
+        <div class="botaoS">
+            <button class="btn" onclick="sim()">SIM</button>
+        </div>
+        <div class="botaoN">
+            <button id="btn" class="btn" onclick="desvia()" onmouseover="desvia()">NÃO</button>
+        </div>
+    </div>
+    <script>
+        function sim() {
+            window.location.href = "https://www.youtube.com/watch?v=b4XpMTUlorc"
+        }
+        function desvia() {
+            let btn = document.getElementById("btn")
+            btn.style.position = "absolute"
+            btn.style.bottom = geraPosicao(10,80)
+            btn.style.left = geraPosicao(10,80)
+        }
+        function geraPosicao(min, max) {
+            return (Math.random() * (max - min)+ min) + "%"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+}
+  /* Estilos dos títulos */
+  h1, h2 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  /* Estilo da barra de pesquisa */
+  #barraPesquisa {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  #botaoCarrinho {
+    margin-top: 30px;
+  }
+
+  /* Container dos produtos */
+  #produtos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  /* Estilo dos cards de produtos */
+  .card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+
+  /* Estilo das imagens dos produtos */
+  .card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+
+  /* Estilo dos botões dos produtos */
+  .card button {
+    background-color: #253529;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  /* Container do carrinho */
+  #carrinho {
+    margin-top: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Cabeçalho do carrinho */
+  .cabecalho-carrinho {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    background: #f8f9fa;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  /* Lista de itens do carrinho */
+  #listaCarrinho {
+    list-style: none;
+    padding: 0;
+  }
+
+  /* Itens individuais do carrinho */
+  #listaCarrinho li {
+    background: white;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Estilo dos botões do carrinho */
+  #listaCarrinho button {
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 2px;
+  }
+
+  /* Botão de aumentar quantidade */
+  #listaCarrinho button.aumentar {
+    background-color: #28a745;
+  }
+
+  /* Botão de diminuir quantidade */
+  #listaCarrinho button.diminuir {
+    background-color: #ffc107;
+  }
+
+  /* Botão de remover item */
+  #listaCarrinho button.remover {
+    background-color: #dc3545;
+  }
+
+  /* Estilo do total do carrinho */
+  #totalCarrinho {
+    text-align: right;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 1.2em;
+  }
