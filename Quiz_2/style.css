@@ -1,0 +1,134 @@
+/* Importando a fonte Delius do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+
+/* Resetando as configurações padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Delius', sans-serif;
+}
+
+/* Estilizando o corpo da página */
+body {
+    background-color: #94654c;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container principal do quiz */
+.container {
+    background-color: #fefcd0;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 90%;
+}
+
+/* Estilo do título */
+h1 {
+    text-align: center;
+    color: #f89fa1;
+    margin-bottom: 2rem;
+}
+
+/* Estilo do placar */
+#placar {
+    color: #94654c;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #fad6d6bd;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+/* Estilo dos números do placar */
+#placar span {
+    font-weight: bold;
+}
+
+/* Cor do número de acertos */
+#acertos {
+    color: #fa797c;
+}
+
+/* Cor do número de erros */
+#erros {
+    color: #fc266d;
+}
+
+/* Estilo da pergunta */
+#pergunta {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #94654c;
+}
+
+/* Estilo das opções de resposta */
+.opcao {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #ffffff;
+    border: 2px solid #fad6d6bd;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #94654c;   
+    transition: all 0.3s;
+}
+
+/* Efeito quando passar o mouse sobre a opção */
+.opcao:hover {
+    background-color: #fad6d6bd;
+}
+
+/* Estilo da opção selecionada */
+.opcao.selecionada {
+    background-color: #f89fa1;
+    color: white;
+    border-color: #f89fa1;
+}
+
+/* Estilo dos botões */
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 1rem;
+    background-color: #94654c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+/* Classe para esconder elementos */
+.esconder {
+    display: none;
+}
+
+/* Estilo da tela de pontuação final */
+#pontuacao {
+    text-align: center;
+}
+
+/* Estilo do título da pontuação final */
+#pontuacao h2 {
+    color: #f89fa1;
+    margin-bottom: 1rem;
+}
+
+/* Estilo do texto da pontuação final */
+#pontuacao p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #fabdbd;
+} 
