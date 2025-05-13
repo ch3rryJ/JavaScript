@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Configurações básicas da página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Senai</title>
+    <!-- Link para o arquivo de estilos -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Container principal do quiz -->
+    <div class="container">
+        <!-- Título do quiz -->
+        <h1>QUIZ - SENAI</h1>
+
+        <!-- Placar que mostra acertos e erros -->
+        <div id="placar">
+            <span>Acertos: <span id="acertos">0</span></span>
+            <span>Erros: <span id="erros">0</span></span>
+        </div>
+
+        <!-- Área principal do quiz -->
+        <div id="quiz">
+            <!-- Onde a pergunta será mostrada -->
+            <div id="pergunta"></div>
+            <!-- Onde as opções de resposta serão mostradas -->
+            <div id="opcoes"></div>
+            <!-- Botão para ir para próxima pergunta -->
+            <button id="proxima">Próxima Pergunta</button>
+        </div>
+
+        <!-- Tela de resultado final (inicialmente escondida) -->
+        <div id="pontuacao" class="esconder">
+            <h2>Resultado Final</h2>
+            <p>Você acertou <span id="valor-pontuacao">0</span> de 3 perguntas!</p>
+            <button id="reiniciar">Reiniciar Quiz</button>
+        </div>
+    </div>
+
+    <!-- Link para o arquivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html> 
