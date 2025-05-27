@@ -15,7 +15,29 @@
     </div>
 
     <script>
-        
+        function atualizarContador() {
+            const agora = new Date()
+
+            const dataAlvo = new Date(2025, 4, 30) //maio = 4 pois janeiro é 0
+            const diferenca = dataAlvo - agora
+
+            if(diferenca <= 0) {
+                document.getElementById("contador").innerHTML = "<p>Chegou</p>"
+                clearInterval(intervalo)
+                return
+            }
+            const dias = Math.floor(diferenca/(1000 * 60 * 60 * 24))
+            const horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) /  (1000 * 60 * 60)) 
+            const minutos = Math.floor((diferenca % (1000*60*60)) / (1000 * 60))
+            const segundos = Math.floor((diferenca % (1000*60)) / 1000)
+
+            document.getElementById("dias") .textContent = "Dias" + dias
+            document.getElementById("horas") . textContent = "Horas" + horas
+            document.getElementById("minutos") .textContent = "Minutos" + minutos
+            document.getElementById("segundos") .textContent = "Segundos" + segundos
+        }
+        atualizarContador()
+        const intervalo = setInterval(atualizarContador, 1000)
     </script>
 </body>
 </html>

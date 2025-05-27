@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Schoolbell&display=swap');
+
+body {
+    font-family: Schoolbell;
+    text-align: center;
+    background-image: url('img/fundo.png');
+    background-repeat: no-repeat;           
+    background-position: center center;     
+    background-size: cover;                 
+    background-attachment: fixed;
+}
+
+
+#relogio{
+    width: 200px;
+    height: 200px;
+}
+
+.data {
+    color: #e2834b;
+}
+
+#contador {
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+#maca{
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+#mensagemFinal {
+    font-size: 2em;
+    color: #76a7c4;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.progresso-container {
+    width: 80%;
+    height: 20px;
+    background-color: #f6cb75;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progresso-barra {
+    height: 100%;
+    background-color: #76a7c4;
+    width: 0%;
+    transition: width 1s linear;
+}
