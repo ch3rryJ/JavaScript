@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Adivinhe o Sylvanian</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Quantos Sylvanians tem na Carry Case?</h1>
+    <p>Escolha um número de 1 a 100!</p>
+
+    <input type="number" id="palpite" min="1" max="100" placeholder="Escolha um número (1-100)">
+    <br><br>
+    <button onclick="verificarPalpite()" id="botaoTentar">Tentar</button>
+    <button onclick="reiniciarJogo()">Reiniciar Jogo</button>
+
+    <div id="mensagem"></div>
+
+    <img id="imagem" src="img/fechado.png" alt="Carry Fechada">
+
+    <div id="historico"><strong>Tentativas anteriores:</strong> <span id="listaTentativas">Nenhuma</span></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

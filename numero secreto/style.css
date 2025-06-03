@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Patrick+Hand&family=Schoolbell&display=swap');
+
+body {
+    font-family: Patrick Hand;
+    background-color: #dae8ff;
+    text-align: center;
+    padding: 30px;
+}
+
+h1 {
+    color: #fd9cbb;
+}
+
+p {
+    color: #719eff;
+}
+
+input {
+    width: 400px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+
+button {
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 8px;
+    margin: 10px;
+    border: none;
+    background-color: #aac4fd;
+    color: white;
+}
+
+button:hover{
+    background-color: #fd9cbb;
+}
+
+#mensagem {
+    color: #fd9cbb;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+#historico {
+    color: #4c82f8;
+    margin-top: 20px;
+    font-family: monospace;
+}
