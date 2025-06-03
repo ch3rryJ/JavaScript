@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Simulador de Caixa - Papelaria</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        
+    <h1>Caixa</h1>
+    
+    <h3>✨ Catálogo de Produtos</h3>
+    <div class="catalogo">
+    <div class="item">
+        <img src="img/cadernos.jpg" alt="Caderno" id="img">
+        <p>📓 Caderno - R$ 15,00</p>
+    </div>
+    <div class="item">
+        <img src="img/canetas.jpg" alt="Caneta" id="img">
+        <p>🖊️ Caneta - R$ 2,50</p>
+    </div>
+    <div class="item">
+        <img src="img/lapis.jpg" alt="Lápis" id="img">
+        <p>✏️ Lápis - R$ 1,50</p>
+    </div>
+    <div class="item">
+        <img src="img/estojo.jpg" alt="Estojo" id="img">
+        <p>👛 Estojo - R$ 18,00</p>
+    </div>
+    <div class="item">
+        <img src="img/bolsa.jpg" alt="Mochila" id="img">
+        <p>🎒 Mochila - R$ 75,00</p>
+    </div>
+    </div>
+
+  <label>Produto:
+    <select id="produto">
+      <option value="">Selecione</option>
+      <option value="📓 Caderno">📓 Caderno</option>
+      <option value="🖊️ Caneta">🖊️ Caneta</option>
+      <option value="✏️ Lápis">✏️ Lápis</option>
+      <option value="👛 Estojo">👛 Estojo</option>
+      <option value="🎒 Mochila">🎒 Mochila</option>
+    </select>
+  </label>
+
+  <label>Valor unitário (R$):
+    <input type="number" id="valor" step="0.01" min="0.01">
+  </label>
+
+  <label>Quantidade:
+    <input type="number" id="quantidade" min="1" value="1">
+  </label>
+
+  <button onclick="adicionarItem()">Adicionar à compra</button>
+  <button onclick="limparTudo()">Limpar compra</button>
+
+  <h3>✨ Itens:</h3>
+  <ul id="listasItens"></ul>
+
+  <h3>Total: R$ <span id="total">0.00</span></h3>
+
+  <label>Valor pago (R$):
+    <input type="number" id="valorPago" step="0.01">
+  </label>
+  <button onclick="calcularTroco()">Calcular troco</button>
+
+  <h3 id="troco"></h3>
+  <h3 id="frete"></h3>
+
+  <script>
+    let total = 0;
+    let quantidadeTotal = 0;
+
+    function adicionarItem() {
+      const produto = document.getElementById("produto").value;
+      const valor = parseFloat(document.getElementById("valor").value);
+      const quantidade = parseInt(document.getElementById("quantidade").value);
+
+      if (!produto || isNaN(valor) || isNaN(quantidade) || valor <= 0 || quantidade < 1) {
+        alert("Preencha todos os dados corretamente.");
+        return;
+      }
+
+      const subtotal = valor * quantidade;
+      total += subtotal;
+      quantidadeTotal += quantidade;
+
+      const lista = document.getElementById("listasItens");
+      const item = document.createElement("li");
+      item.textContent = `${produto} - R$${valor.toFixed(2)} x ${quantidade} = R$${subtotal.toFixed(2)}`;
+      lista.appendChild(item);
+
+      document.getElementById("total").textContent = total.toFixed(2);
+
+      document.getElementById("frete").textContent = 
+        quantidadeTotal > 5 ? "🚚 Frete grátis aplicado!" : "";
+
+      // Reset campos
+      document.getElementById("produto").value = "";
+      document.getElementById("valor").value = "";
+      document.getElementById("quantidade").value = "1";
+    }
+
+    function calcularTroco() {
+      const valorPago = parseFloat(document.getElementById("valorPago").value);
+      if (isNaN(valorPago)) {
+        alert("Informe um valor válido pago.");
+        return;
+      }
+      const troco = valorPago - total;
+      document.getElementById("troco").textContent =
+        troco < 0
+          ? `Valor insuficiente. Faltam R$${Math.abs(troco).toFixed(2)}.`
+          : `Troco: R$${troco.toFixed(2)}`;
+    }
+
+    function limparTudo() {
+      document.getElementById("listasItens").innerHTML = "";
+      document.getElementById("total").textContent = "0.00";
+      document.getElementById("valorPago").value = "";
+      document.getElementById("troco").textContent = "";
+      document.getElementById("frete").textContent = "";
+      total = 0;
+      quantidadeTotal = 0;
+    }
+  </script>
+</body>
+</html>
