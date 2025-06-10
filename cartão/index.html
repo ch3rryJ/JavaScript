@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 300px;
+            height: 100px;
+            perspective: 1000px;
+        }
+
+        .cartao {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+
+        .cartao.virado {
+            transform: rotateY(180deg);
+        }
+
+        .frente, .verso {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .frente {
+            background-color: red;
+        }
+
+        .verso {
+            background-color: green;
+            transform: rotateY(180deg);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cartao" id="cartao">
+            <div class="frente">
+            Frente do cartao
+            </div>
+            <div class="verso" id="mensagemVerso">
+            </div>
+        </div>
+    </div>
+    <script>
+        const cartao = document.getElementById("cartao")
+        const mensagemVerso = document.getElementById("mensagemVerso")
+
+        const mensagem = "Verso do cartão"
+
+        mensagemVerso.textContent = mensagem
+        cartao.addEventListener("click", () => {
+            cartao.classList.toggle("virado")
+        })
+    </script>
+</body>
+</html>

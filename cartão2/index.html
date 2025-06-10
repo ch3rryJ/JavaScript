@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartões Interativos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="cartoes-container">
+
+    <div class="container">
+        <div class="cartao aniversario">
+            <div class="frente">🎉 Feliz Aniversário amiga Nayara</div>
+            <div class="verso"></div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="container">
+        <div class="cartao">
+            <div class="frente2">🎄 Feliz Natal!</div>
+            <div class="verso2"></div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="container">
+        <div class="cartao">
+            <div class="frente3">💐 Feliz Dia das Mães!</div>
+            <div class="verso3"></div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="container">
+        <div class="cartao">
+            <div class="frente4">❤️ Feliz Dia dos Namorados!</div>
+            <div class="verso4"></div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="container">
+        <div class="cartao">
+            <div class="frente5">🎆 Feliz Ano Novo!</div>
+            <div class="verso5"></div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="container">
+        <div class="cartao">
+            <div class="frente6">🐰 Feliz Páscoa!</div>
+            <div class="verso6"></div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="container">
+        <div class="cartao">
+            <div class="frente7">📚 Dia do Professor</div>
+            <div class="verso7"></div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="container">
+        <div class="cartao">
+            <div class="frente8">😔 Desculpas</div>
+            <div class="verso8"></div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="container">
+        <div class="cartao">
+            <div class="frente9">💪 Você consegue!</div>
+            <div class="verso9"></div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="container">
+        <div class="cartao">
+            <div class="frente10">🎉 Festa Junina!</div>
+            <div class="verso10"></div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    // Faz todos os cartões girarem ao clique
+    document.querySelectorAll('.cartao').forEach(cartao => {
+        cartao.addEventListener('click', () => {
+            cartao.classList.toggle('virado');
+        });
+    });
+</script>
+
+</body>
+</html>

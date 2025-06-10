@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=M+PLUS+Rounded+1c&family=Patrick+Hand&family=Schoolbell&display=swap');
+.cartoes-container {
+    display: flex;
+    flex-wrap: wrap;         
+    gap: 20px;               
+    justify-content: center; 
+    padding: 20px;
+}
+
+/* aniversario */
+.container {
+    font-family: 'M PLUS Rounded 1c';
+            width: 300px;
+            height: 150px;
+            perspective: 1000px;
+        }
+
+        .cartao {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+
+        .cartao.virado {
+            transform: rotateY(180deg);
+        }
+
+        .frente, .verso {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .frente {
+            background-color: #fac639;
+        }
+
+        .verso {
+            background-image: url(img/presente.png);
+            background-size: 300px 150px;
+            transform: rotateY(180deg);
+            text-align: center;
+        }
+
+/* natal */
+        .frente2, .verso2 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .frente2 {
+            background-color: #61a785;
+        }
+
+        .verso2 {
+            background-image: url(img/natal.png);
+            background-size: 300px 150px;
+            transform: rotateY(180deg);
+            text-align: center;
+        }
+
+/* mâes */
+         .frente3, .verso3 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .frente3 {
+            background-color: #df897e;
+        }
+
+        .verso3 {
+            background-image: url(img/mae.png);
+            background-size: 300px 150px;
+            transform: rotateY(180deg);
+            text-align: center;
+        }
+
+/* namorados */
+         .frente4, .verso4 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .frente4 {
+            background-color: #fa8777;
+        }
+
+        .verso4 {
+            background-image: url(img/namorados.png);
+            background-size: 300px 150px;
+            transform: rotateY(180deg);
+            text-align: center;
+        }
+
+/* ano novo */
+         .frente5, .verso5 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .frente5 {
+            background-color: #5385a8;
+        }
+
+        .verso5 {
+            background-image: url(img/novo.png);
+            background-size: 300px 150px;
+            transform: rotateY(180deg);
+            text-align: center;
+        }
+
+/* pascoa */
+         .frente6, .verso6 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .frente6 {
+            background-color: #e1c5c6;
+        }
+
+        .verso6 {
+            background-image: url(img/pacoa.png);
+            background-size: 300px 150px;
+            transform: rotateY(180deg);
+            text-align: center;
+        }
+
+/* professor */
+         .frente7, .verso7 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .frente7 {
+            background-color: #e8c47b;
+        }
+
+        .verso7 {
+            background-image: url(img/professor.png);
+            background-size: 300px 150px;
+            transform: rotateY(180deg);
+            text-align: center;
+        }
+
+/* desculpas */
+         .frente8, .verso8 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .frente8 {
+            background-color: #c19ddd;
+        }
+
+        .verso8 {
+            background-image: url(img/desculpa.png);
+            background-size: 300px 150px;
+            transform: rotateY(180deg);
+            text-align: center;
+        }
+
+/* motivacional */
+         .frente9, .verso9 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .frente9 {
+            background-color: #f2dec5;
+        }
+
+        .verso9 {
+            background-image: url(img/força.png);
+            background-size: 300px 150px;
+            transform: rotateY(180deg);
+            text-align: center;
+        }
+
+/* junina */
+        .frente10, .verso10 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .frente10 {
+            background-color: #5ea7e4;
+        }
+
+        .verso10 {
+            background-image: url(img/junina.png);
+            background-size: 300px 150px;
+            transform: rotateY(180deg);
+            text-align: center;
+        }
