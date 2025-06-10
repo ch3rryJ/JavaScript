@@ -23,7 +23,7 @@
                     <button onclick="escolha2('direita')">Direita</button>
                 `;
             } else {
-                div.innerHTML = <p>Você foi para casa. FIM</p>;
+                div.innerHTML = `<p>Você foi para casa. FIM</p>`;
             }
         }
 
@@ -48,16 +48,16 @@
             const div = document.getElementById("historia");
             switch (acao) {
                 case "lutar":
-                    div.innerHTML = <p>Você venceu. Parabéns! FIM</p>;
+                    div.innerHTML = `<p>Você venceu. Parabéns! FIM</p>`;
                     break;
                 case "fugir":
-                    div.innerHTML = <p>Você fugiu e chegou na entrada da floresta. FIM</p>;
+                    div.innerHTML = `<p>Você fugiu e chegou na entrada da floresta. FIM</p>`;
                     break;
                 case "abrir":
-                    div.innerHTML = <p>No baú tinha um tesouro, você agora está rico. FIM</p>;
+                    div.innerHTML = `<p>No baú tinha um tesouro, você agora está rico. FIM</p>`;
                     break;
                 case "ignorar":
-                    div.innerHTML = <p>Você caminhou e chegou na entrada da floresta. FIM</p>;
+                    div.innerHTML = `<p>Você caminhou e chegou na entrada da floresta. FIM</p>`;
                     break;
             }
         }

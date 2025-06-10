@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>The Last of Us: Interativo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>The Last of Us</h1>
+    <div id="historia">
+        <p>O mundo desabou após a infecção. Você está escondido em um abrigo seguro. Quer sair para buscar suprimentos?</p>
+        <img src="img/abrigo.jpg" alt="Abrigo em ruínas">
+        <button onclick="escolha1('sim')">Sim, sair</button>
+        <button onclick="escolha1('nao')">Não, ficar</button>
+    </div>
+
+    <script>
+        function escolha1(resposta) {
+            const div = document.getElementById("historia");
+            if (resposta === "sim") {
+                div.innerHTML = `
+                    <p>Você encontra uma rua deserta e uma viela estreita e sombria. Qual caminho escolhe?</p>
+                    <img src="img/rua.jpg" alt="Rua deserta">
+                    <button onclick="escolha2('rua')">Rua principal</button>
+                    <button onclick="escolha2('viela')">Viela escura</button>
+                `;
+            } else {
+                div.innerHTML = `<p>Você decidiu ficar no abrigo, mas os infectados conseguiram invadir. Fim trágico. ☠️ FIM</p>`;
+            }
+        }
+
+        function escolha2(caminho) {
+            const div = document.getElementById("historia");
+            if (caminho === "rua") {
+                div.innerHTML = `
+                    <p>Na rua, você vê um carro abandonado com as portas abertas e um supermercado saqueado. O que vai explorar?</p>
+                    <img src="img/carro.jpg" alt="Carro abandonados">
+                    <button onclick="escolha3('carro')">Carro abandonado</button>
+                    <button onclick="escolha3('mercado')">Supermercado</button>
+                `;
+            } else {
+                div.innerHTML = `
+                    <p>Na viela, há uma escada que leva ao telhado de um prédio e uma porta de metal trancada. Para onde vai?</p>
+                    <img src="img/predio.jpg" alt="Prédio">
+                    <button onclick="escolha3('escada')">Subir no telhado</button>
+                    <button onclick="escolha3('porta')">Forçar a porta</button>
+                `;
+            }
+        }
+
+        function escolha3(lugar) {
+            const div = document.getElementById("historia");
+            if (lugar === "carro") {
+                div.innerHTML = `
+                    <p>Você encontra gasolina no carro! Deseja ligar o motor e tentar escapar?</p>
+                    <img src="img/gasolina.png" alt="Gasolina encontrada">
+                    <button onclick="escolha4('ligar')">Sim, fugir</button>
+                    <button onclick="escolha4('procurar')">Não, procurar mais</button>
+                `;
+            } else if (lugar === "mercado") {
+                div.innerHTML = `
+                    <p>Você encontra mantimentos, mas acaba atraindo a atenção de infectados. Vai lutar ou fugir?</p>
+                    <img src="img/mercado.jpg" alt="mercado">
+                    <button onclick="escolha4('lutar')">Lutar</button>
+                    <button onclick="escolha4('correr')">Correr</button>
+                `;
+            } else if (lugar === "escada") {
+                div.innerHTML = `
+                    <p>No topo do prédio, você avista um helicóptero ao longe. Vai tentar chamar a atenção ou descer?</p>
+                    <img src="img/topo.jpg" alt="Telhado">
+                    <button onclick="escolha4('acenar')">Acenar para o helicóptero</button>
+                    <button onclick="escolha4('descer')">Descer pela escada</button>
+                `;
+            } else {
+                div.innerHTML = `
+                    <p>Você força a porta e encontra suprimentos e um rádio antigo. Vai tentar usar a rádio para pedir ajuda?</p>
+                    <img src="img/radio.png" alt="Rádio antigo">
+                    <button onclick="escolha4('usar')">Usar rádio</button>
+                    <button onclick="escolha4('ignorar')">Ignorar e sair</button>
+                `;
+            }
+        }
+
+        function escolha4(acao) {
+            const div = document.getElementById("historia");
+            switch (acao) {
+                case "ligar":
+                    div.innerHTML = `<p>Você ligou o carro e conseguiu escapar da zona infestada! Parabéns, sobreviveu! 🚗💨</p>`;
+                    break;
+                case "procurar":
+                    div.innerHTML = `<p>Enquanto procura mais suprimentos, você foi surpreendido por infectados. ☠️</p>`;
+                    break;
+                case "lutar":
+                    div.innerHTML = `
+                        <p>Você eliminou os infectados, mas ficou ferido. Vai tentar seguir para um hospital abandonado próximo?</p>
+                        <img src="img/hospital.jpg " alt="Hospital abandonado">
+                        <button onclick="escolha5('hospital')">Sim</button>
+                        <button onclick="escolha5('esconderijo')">Não, voltar para esconderijo</button>
+                    `;
+                    break;
+                case "correr":
+                    div.innerHTML = `<p>Você conseguiu fugir, mas está sem suprimentos e fraco. Sua sobrevivência é incerta. 🌧️</p>`;
+                    break;
+                case "acenar":
+                    div.innerHTML = `<p>O helicóptero te avistou e enviou uma equipe para resgatar você! Sobrevivência garantida! 🚁</p>`;
+                    break;
+                case "descer":
+                    div.innerHTML = `<p>Ao descer, você foi cercado por infectados e não conseguiu escapar. ☠️</p>`;
+                    break;
+                case "usar":
+                    div.innerHTML = `<p>Você conseguiu contato com uma base segura e será resgatado em breve! 🛡️</p>`;
+                    break;
+                case "ignorar":
+                    div.innerHTML = `<p>Ignorando a rádio, você perdeu a chance de ser resgatado e acabou cercado. ☠️</p>`;
+                    break;
+            }
+        }
+
+        function escolha5(fim) {
+            const div = document.getElementById("historia");
+            if (fim === "hospital") {
+                div.innerHTML = `<p>No hospital abandonado, você recebeu cuidados e encontrou outros sobreviventes. Há esperança! 🏥</p>`;
+            } else {
+                div.innerHTML = `<p>Sem cuidados, suas feridas se agravaram e você não resistiu. ☠️</p>`;
+            }
+        }
+    </script>
+</body>
+</html>
