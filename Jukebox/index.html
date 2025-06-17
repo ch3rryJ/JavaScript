@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center;">
+    <h1>Jukebox</h1>
+    <p>Selecione como está se sentindo e ouça uma música</p>
+
+    <button onclick="tocar('feliz')">Feliz</button>
+    <button onclick="tocar('Tristeza')">Triste</button>
+    <button onclick="tocar('Aventura')">Aventureiro</button>
+    <button onclick="tocar('Amor')">Romântico</button>
+    <button onclick="tocar('Terror')">Medo</button>
+    <button onclick="tocar('Calma')">Calma</button>
+    <button onclick="tocar('Animação')">Animado</button>
+    <button onclick="tocar('Suspense')">Choque</button>
+    <button onclick="parar()">Parar</button>
+    <br><br>
+    <p id="nome-audio">Nome do áudio aparecerá aqui</p>
+
+
+    <div id="imagem" style="margin-top: 30px;">
+        <img src="" alt="" id="foto" width="300" style="display: none;">
+    </div>
+
+    <audio src="" id="audio" controls style="margin-top: 20px; display: none;"></audio>
+    <script>
+        function tocar(tipo) {
+            const audio = document.getElementById("audio")
+            const foto = document.getElementById("foto")
+
+            let musica = ""
+            let imagem = ""
+            let cor = ""
+
+            if (tipo == "feliz") {
+                musica = "audios/feliz.mp3"
+                imagem = "https://i.pinimg.com/736x/67/81/e4/6781e4ee9a53d9c03f042cb3b72b8b3d.jpg"
+                cor = "#FFFACD"
+                document.getElementById("nome-audio").innerText = "Mii Editor - Mii Maker (Wii U) Music"
+            }
+
+             if (tipo == "Tristeza") {
+                musica = "audios/triste.mp3"
+                imagem = "https://i.pinimg.com/736x/be/16/d5/be16d5ad5eae3c5611b86232591dcde6.jpg"
+                cor = "#AEC6CF"
+                document.getElementById("nome-audio").innerText = "Photo Channel - SD Card Photo List"
+            }
+             if (tipo == "Aventura") {
+                musica = "audios/aventura.mp3"
+                imagem = "https://i.pinimg.com/736x/ae/03/90/ae03903ac737cde5fa44f3910ca5439b.jpg"
+                cor = "#F4A6A6"
+                document.getElementById("nome-audio").innerText = "Menu 7 (eShop) - Nintendo Wii U"
+            }
+             if (tipo == "Amor") {
+                musica = "audios/amor.mp3"
+                imagem = "https://i.pinimg.com/736x/21/d4/45/21d445520c5a9bf6ac5a87ae29959a2a.jpg"
+                cor = "#D8A7B1"
+                document.getElementById("nome-audio").innerText = "Wii Party Soundtrack 031 - Garden Gridlock"
+            }
+             if (tipo == "Terror") {
+                musica = "audios/terror.mp3"
+                imagem = "https://i.pinimg.com/736x/65/4e/18/654e1802fb9c1fb6226dc7d6e76793aa.jpg"
+                cor = "#BFA2DB"
+                document.getElementById("nome-audio").innerText = "Majora's Mask Ikana Valley Music"
+            }
+             if (tipo == "Calma") {
+                musica = "audios/calmo.mp3"
+                imagem = "https://i.pinimg.com/736x/33/03/a5/3303a5309675ad5122e3b64e8f3cca44.jpg"
+                cor = "#C8E6C9"
+                document.getElementById("nome-audio").innerText = "Nintendo Switch - Unused eShop Theme [Extended]"
+            }
+             if (tipo == "Animação") {
+                musica = "audios/animada.mp3"
+                imagem = "https://i.pinimg.com/736x/c3/58/f1/c358f1f5ee7f3b95c56b449685bfeb8e.jpg"
+                cor = "#FFDAB9"
+                document.getElementById("nome-audio").innerText = "Body Measurement Theme - Wii Fit/Wii Fit Plus Soundtrack"
+            }
+             if (tipo == "Suspense") {
+                musica = "audios/choque.mp3"
+                imagem = "https://i.pinimg.com/736x/c8/0e/a1/c80ea192a5e441231df33fa9cdb96efa.jpg"
+                cor = "#A2B9D2"
+                document.getElementById("nome-audio").innerText = "Master Kohga's Theme (The Legend of Zelda: Breath of the Wild OST)"
+            }
+            document.body.style.backgroundColor = cor
+            foto.src = imagem
+            foto.style.display = "block"
+
+            audio.src = musica
+            audio.play()
+            audio.style.display = "block"
+        }
+        function parar (){
+            const audio = document.getElementById("audio")
+            audio. pause()
+            audio.currentTime = 0
+            audio.style.display = "none"
+
+            const foto = document.getElementById("foto")
+            foto.style.display = "none"
+
+            document.body.style.backgroundColor = "#fff"
+        }
+    </script>
+</body>
+</html>
