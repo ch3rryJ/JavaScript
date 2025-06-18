@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monte seu avatar</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: rgb(199, 216, 231);
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 20px;
+        }
+
+        .box {
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0px 4px 8px black;
+        }
+
+        .controle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .controle button {
+            margin: 0 10px;
+            padding: 5px 10px;
+        }
+
+        #avatar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 300px;
+        }
+
+        #avatar img {
+            width: 250px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Monte seu avatar</h1>
+
+    <div class="container">
+        <div class="box">
+            <div class="label">Cabelo</div>
+            <img id="cabelo" src="img/cabelo/cabelo1.png" width="100" alt="">
+            <div class="controle">
+                <button onclick="troca('cabelo', -1)"> &lt; </button>
+                <button onclick="troca('cabelo', 1)"> &gt; </button>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="label">Rosto</div>
+            <img id="rosto" src="img/rosto/rosto1.png" width="100" alt="">
+            <div class="controle">
+                <button onclick="troca('rosto', -1)"> &lt; </button>
+                <button onclick="troca('rosto', 1)"> &gt; </button>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="label">Corpo</div>
+            <img id="corpo" src="img/corpo/corpo1.png" width="100" alt="">
+            <div class="controle">
+                <button onclick="troca('corpo', -1)"> &lt; </button>
+                <button onclick="troca('corpo', 1)"> &gt; </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="avatar">
+        <img src="img/cabelo/cabelo1.png" alt="" id="img-cabelo">
+        <img src="img/rosto/rosto1.png" alt="" id="img-rosto">
+        <img src="img/corpo/corpo1.png" alt="" id="img-corpo">
+    </div>
+
+    <button onclick="baixarAvatar()">Baixar Avatar</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <script>
+        const opcoes = {
+            cabelo: 5,
+            rosto: 5,
+            corpo: 5
+        }
+
+        const estado = {
+            cabelo: 1,
+            rosto: 1,
+            corpo: 1
+        }
+
+        function troca(parte, direcao) {
+            estado[parte] += direcao
+
+            if (estado[parte] > opcoes[parte]) {
+                estado[parte] = 1
+            }
+
+            // Se passou o minimo, vai para o maximo
+            if (estado[parte] < 1) {
+                estado[parte] = opcoes[parte]
+            }
+            // Atualiza a imagem na caixa
+            document.getElementById(parte).src = `img/${parte}/${parte}${estado[parte]}.png`
+            // Atualiza a imagem na area do avatar I
+            document.getElementById(`img-${parte}`).src = `img/${parte}/${parte}${estado[parte]}.png`
+        }
+        function baixarAvatar() {
+            const avatar = document.getElementById("avatar")
+            html2canvas(avatar).then(canvas => {
+                const link = document.createElement('a')
+                link.download = "meu_avatar.png"
+                link.href = canvas.toDataURL()
+                link.click()
+            })
+        }
+    </script>
+</body>
+
+</html>
